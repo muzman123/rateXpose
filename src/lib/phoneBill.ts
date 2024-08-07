@@ -7,10 +7,22 @@ class PhoneBill {
     private _sms?: number;
     private _uploadedAt?: Date;
     private _description?: string;
+    private _location?: string;
   
-    constructor(id: string, provider: string, monthlyCost?: number, dataLimit?: number, minutes?: number, sms?: number, uploadedAt?: Date, description?: string) {
+    constructor(
+      id: string,
+      provider: string, 
+      monthlyCost?: number, 
+      dataLimit?: number, 
+      minutes?: number, 
+      sms?: number, 
+      uploadedAt?: Date, 
+      description?: string, 
+      location?: string
+    ) {
       this._id = id;
       this._provider = provider;
+      this._location = location;
       if (monthlyCost) this._monthlyCost = monthlyCost;
       if (dataLimit) this._dataLimit = dataLimit;
       if (minutes) this._minutes = minutes;
@@ -51,6 +63,10 @@ class PhoneBill {
     set description(description: string) {
       this._description = description;
     }
+
+    set location(location: string) {
+      this._location = location;
+    }
   
     // Getters (if needed)
     get id(): string {
@@ -83,6 +99,10 @@ class PhoneBill {
   
     get description(): string | undefined {
       return this._description;
+    }
+
+    get location(): string | undefined {
+      return this._location;
     }
   }
   

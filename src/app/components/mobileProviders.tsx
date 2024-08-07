@@ -1,7 +1,7 @@
 // components/MobileProvider.tsx
 'use client';
 
-import React, { use, useState } from 'react';
+import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import Image, { StaticImageData } from 'next/image'
 
@@ -57,28 +57,28 @@ const planPerks = [
   "Voicemail",
 ];
 
-
 const MobileProvider: React.FC = () => {
   const [step, setStep] = useState(1);
   const router = useRouter();
 
   function handleProviderClick(provider: Provider) {
-    console.log("TELUUUUS");
-
     defaultPhoneBill.provider = provider.name;
-    
     setStep(2);
-    // Add your custom logic here
-    // For example, you could insert data into Supabase
-    // insertPhonePlan(provider);
   };
 
-  function handleFirstSubmit()
-  {
+  function handleFirstSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault(); // Prevent the default form submission
+
     const monthly_cost = (document.getElementById("monthly_cost") as HTMLInputElement).value;
     const data_limit = (document.getElementById("data_limit") as HTMLInputElement).value;
     const minutes = (document.getElementById("minutes") as HTMLInputElement).value;
     const sms = (document.getElementById("sms_limit") as HTMLInputElement).value;
+
+    // Check if all fields are filled
+    if (!monthly_cost || !data_limit || !minutes || !sms) {
+      alert("Please fill in all fields before proceeding.");
+      return;
+    }
 
     defaultPhoneBill.monthlyCost = Number(monthly_cost);
     defaultPhoneBill.dataLimit = Number(data_limit);
@@ -88,14 +88,11 @@ const MobileProvider: React.FC = () => {
     setStep(3);
   }
   
-  function handleSecondSubmit()
-  {
+  function handleSecondSubmit() {
     setStep(4);
-
   }
 
-  async function handleFinalSubmit()
-  {
+  async function handleFinalSubmit() {
     insertPhonePlans(defaultPhoneBill)
     setStep(5);
   }
@@ -118,12 +115,13 @@ const MobileProvider: React.FC = () => {
           </div>
       </>
       )}  
-      {step === 2 && (<>
+      {step === 2 && (
+        <>
           <div>
           <h2 className="text-center text-3xl mt-4 mb-10">
             Please provide your billing details
           </h2>
-          <form>
+          <form onSubmit={handleFirstSubmit}>
             <div className="mb-4">
               <label className="block mb-2" htmlFor="monthly_cost">
                 Monthly Cost (CAD):
@@ -132,6 +130,7 @@ const MobileProvider: React.FC = () => {
                 type="number"
                 id="monthly_cost"
                 className="border rounded p-2 w-full"
+                required
               />
             </div>
             <div className="mb-4">
@@ -142,6 +141,7 @@ const MobileProvider: React.FC = () => {
                 type="number"
                 id="data_limit"
                 className="border rounded p-2 w-full"
+                required
               />
             </div>
             <div className="mb-4">
@@ -152,6 +152,7 @@ const MobileProvider: React.FC = () => {
                 type="number"
                 id="minutes"
                 className="border rounded p-2 w-full"
+                required
               />
             </div>
             <div className="mb-4">
@@ -162,17 +163,19 @@ const MobileProvider: React.FC = () => {
                 type="number"
                 id="sms_limit"
                 className="border rounded p-2 w-full"
+                required
               />
             </div>
             <div className="mt-4">
-              <button className="px-4 py-2 bg-green-500 text-white rounded" onClick={handleFirstSubmit}>
+              <button type="submit" className="px-4 py-2 bg-green-500 text-white rounded">
                 Next
               </button>
             </div>
           </form>
         </div>
-          </>)}
-    {step === 3 && (
+        </>
+      )}
+      {step === 3 && (
         <div className="mb-4">
         <label className="text-center text-3xl mt-4 mb-10">Bring Your Own Device?</label>
         <div className="flex items-center py-5">
