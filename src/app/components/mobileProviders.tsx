@@ -98,7 +98,7 @@ const MobileProvider: React.FC = () => {
   }
 
   function handleCloseModal(): void {
-    router.push('/landing');
+    router.push('/');
   }
 
   return (

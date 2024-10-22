@@ -27,12 +27,12 @@ const Header: React.FC = () => {
         </button>
 
         <div className={`w-full lg:flex lg:items-baseline lg:w-auto ${isMenuOpen ? 'block' : 'hidden'}`}>
-          <div className="flex-grow mx-4 my-4 lg:my-0 mx-16">
+          <div className="flex-grow mx-16 my-4 lg:my-0 mx-16">
             <input type="text" className="p-2 border border-black rounded w-full" placeholder="Search the community..." />
           </div>
           
           <nav className="flex flex-col items-end lg:flex-row ml-5 gap-3 lg:space-x-20">
-            <Link href="/landing" className="text-black text-sm font-bold">Home</Link>
+            <Link href="/" className="text-black text-sm font-bold">Home</Link>
             <Link href="/about" className="text-black text-sm font-bold">About</Link>
             <Link href="/blog" className="text-black text-sm font-bold">Blog</Link>
             <Link href="/post-bill" className="text-black text-sm font-bold">Post Bill</Link>
