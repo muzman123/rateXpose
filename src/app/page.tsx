@@ -18,12 +18,12 @@ const LandingPage = () => {
       <main className="min-h-screen">
         {/* Hero Section with Key Metrics */}
         <section className="bg-white border-b border-secondary-200">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
             <div className="text-center">
               <h1 className="text-4xl font-bold text-secondary-900 sm:text-5xl lg:text-6xl">
                 Stop Overpaying for Your Bills
               </h1>
-              <p className="mt-6 text-xl text-secondary-600 max-w-3xl mx-auto">
+              <p className="mt-6 text-xl text-secondary-600 max-w-3xl mx-auto py-4">
                 Anonymous rate sharing platform where Canadians discover pricing transparency
                 and find better deals on phone, internet, and utility plans.
               </p>
