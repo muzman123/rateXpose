@@ -122,7 +122,7 @@ export default function SignUpPage() {
                   disabled={loading}
                 />
                 <p className="mt-1 text-xs text-secondary-500">
-                  We'll only use this for account verification and security purposes
+                  We&apos;ll only use this for account verification and security purposes
                 </p>
               </div>
 

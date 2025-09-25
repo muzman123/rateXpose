@@ -30,7 +30,7 @@ interface PlanCardProps {
 
 // Utility functions
 const formatRate = (rate: number) => {
-  return `${rate.toFixed(1)}¢`;
+  return `${rate.toFixed(2)}¢`;
 };
 
 const formatServiceFee = (fee: number) => {
@@ -39,7 +39,7 @@ const formatServiceFee = (fee: number) => {
 
 const calculateEstimatedMonthly = (rate: number, serviceFee: number, usage: number = 600) => {
   // Estimate based on average 600 kWh usage
-  const energyCost = (rate) * usage; // Convert cents to dollars
+  const energyCost = (rate/100) * usage; // Convert cents to dollars
   return energyCost + serviceFee;
 };
 

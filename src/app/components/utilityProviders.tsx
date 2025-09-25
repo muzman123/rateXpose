@@ -249,9 +249,9 @@ const UtilityProvider: React.FC = () => {
             <div className="bg-secondary-50 rounded-lg p-4">
               <h4 className="font-medium text-secondary-900 mb-2">💡 Where to find this information:</h4>
               <ul className="text-sm text-secondary-600 space-y-1">
-                <li>• Look for "Energy Charge" or "Electricity Rate" on your bill</li>
-                <li>• Service fees are often listed as "Delivery Charge" or "Basic Service Fee"</li>
-                <li>• Don't include taxes or one-time charges</li>
+                <li>• Look for &quot;Energy Charge&quot; or &quot;Electricity Rate&quot; on your bill</li>
+                <li>• Service fees are often listed as &quot;Delivery Charge&quot; or &quot;Basic Service Fee&quot;</li>
+                <li>• Don&apos;t include taxes or one-time charges</li>
               </ul>
             </div>
 

@@ -11,7 +11,7 @@ const Footer = () => {
                 <span className="text-xl font-bold text-secondary-900">RateXpose</span>
               </div>
               <p className="text-sm text-secondary-600 mb-4">
-                Canada's leading platform for anonymous rate sharing and pricing transparency.
+                Canada&apos;s leading platform for anonymous rate sharing and pricing transparency.
               </p>
               <div className="flex space-x-4">
                 <a href="#" className="text-secondary-400 hover:text-secondary-600 transition-colors">

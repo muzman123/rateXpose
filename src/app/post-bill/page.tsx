@@ -233,7 +233,7 @@ const PostBillPage = () => {
                     Why Share Your Rates?
                   </h3>
                   <p className="text-sm text-primary-700 mb-4">
-                    Your anonymous contribution helps build Canada's largest database of real pricing data,
+                    Your anonymous contribution helps build Canada&apos;s largest database of real pricing data,
                     empowering consumers to negotiate better deals and avoid overpaying.
                   </p>
                   <div className="flex flex-wrap justify-center gap-6 text-xs text-primary-600">

@@ -38,25 +38,25 @@ const AboutPage = () => {
             <p className="mt-4 text-gray-600">Compare your bills anonymously with others to find the most affordable options in the market.</p>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-6">
                 <div className="bg-white p-6 border rounded">
-                    <img src="https://placehold.co/200x200" alt="Illustration of a person reviewing bills" className="w-full h-32 object-cover mb-4"/>
+                    <Image src="https://placehold.co/200x200" alt="Illustration of a person reviewing bills" width={200} height={200} className="w-full h-32 object-cover mb-4"/>
                     <h3 className="text-lg font-semibold">How It Works</h3>
                     <p className="mt-2 text-gray-600">1. Users anonymously submit their utility, phone, and insurance bills along with the service provider information.</p>
                     <a href="#" className="text-blue-600 mt-4 inline-block">View Bills <i className="fas fa-arrow-right"></i></a>
                 </div>
                 <div className="bg-white p-6 border rounded">
-                    <img src="https://placehold.co/200x200" alt="Illustration of bill comparison" className="w-full h-32 object-cover mb-4"/>
+                    <Image src="https://placehold.co/200x200" alt="Illustration of bill comparison" width={200} height={200} className="w-full h-32 object-cover mb-4"/>
                     <h3 className="text-lg font-semibold">Compare and Save</h3>
                     <p className="mt-2 text-gray-600">2. Compare your bills with others to find the most affordable options for utility, phone, and insurance services.</p>
                     <a href="#" className="text-blue-600 mt-4 inline-block">Compare Prices <i className="fas fa-arrow-right"></i></a>
                 </div>
                 <div className="bg-white p-6 border rounded">
-                    <img src="https://placehold.co/200x200" alt="Illustration of affordable options" className="w-full h-32 object-cover mb-4"/>
+                    <Image src="https://placehold.co/200x200" alt="Illustration of affordable options" width={200} height={200} className="w-full h-32 object-cover mb-4"/>
                     <h3 className="text-lg font-semibold">Find Affordable Options</h3>
                     <p className="mt-2 text-gray-600">3. Discover affordable options based on the bills submitted by other users and make informed decisions.</p>
                     <a href="#" className="text-blue-600 mt-4 inline-block">Discover Options <i className="fas fa-arrow-right"></i></a>
                 </div>
                 <div className="bg-white p-6 border rounded">
-                    <img src="https://placehold.co/200x200" alt="Illustration of making decisions" className="w-full h-32 object-cover mb-4"/>
+                    <Image src="https://placehold.co/200x200" alt="Illustration of making decisions" width={200} height={200} className="w-full h-32 object-cover mb-4"/>
                     <h3 className="text-lg font-semibold">Make Informed Decisions</h3>
                     <p className="mt-2 text-gray-600">4. Use the information from the submitted bills to make informed decisions and choose the best service providers.</p>
                     <a href="#" className="text-blue-600 mt-4 inline-block">Choose Providers <i className="fas fa-arrow-right"></i></a>
@@ -70,10 +70,10 @@ const AboutPage = () => {
             <p className="mt-4 text-gray-600">Compare how much you are paying to others for the most affordable options.</p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
                 <div className="bg-white p-6 border rounded">
-                    <img src="https://placehold.co/600x400" alt="Image showing a group of people on snowy mountains" className="w-full h-64 object-cover mb-4"/>
+                    <Image src="https://placehold.co/600x400" alt="Image showing a group of people on snowy mountains" width={600} height={400} className="w-full h-64 object-cover mb-4"/>
                 </div>
                 <div className="bg-white p-6 border rounded">
-                    <img src="https://placehold.co/600x400" alt="Image showing a historic building with lights" className="w-full h-64 object-cover mb-4"/>
+                    <Image src="https://placehold.co/600x400" alt="Image showing a historic building with lights" width={600} height={400} className="w-full h-64 object-cover mb-4"/>
                 </div>
             </div>
       </section>

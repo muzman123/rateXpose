@@ -23,7 +23,7 @@ interface PlanDetailsPaneProps {
 
 // Utility functions
 const formatRate = (rate: number) => {
-  return `${rate.toFixed(1)}¢`;
+  return `${rate.toFixed(2)}¢`;
 };
 
 const formatServiceFee = (fee: number) => {
@@ -31,7 +31,7 @@ const formatServiceFee = (fee: number) => {
 };
 
 const calculateEstimatedBill = (rate: number, serviceFee: number, usage: number = 600) => {
-  const energyCost = (rate) * usage;
+  const energyCost = (rate/100) * usage;
   return energyCost + serviceFee;
 };
 

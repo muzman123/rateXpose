@@ -198,7 +198,7 @@ const MobilePlansPage = () => {
             <div className="mt-12 text-center">
               <div className="card max-w-2xl mx-auto bg-gradient-to-r from-primary-50 to-primary-100 border-primary-200">
                 <h3 className="text-lg font-semibold text-primary-900 mb-2">
-                  Help Build Canada's Rate Database
+                  Help Build Canada&apos;s Rate Database
                 </h3>
                 <p className="text-sm text-primary-700 mb-4">
                   Share your mobile plan details to help other Canadians find better deals and create pricing transparency.
