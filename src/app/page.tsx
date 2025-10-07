@@ -5,6 +5,7 @@ import Footer from './components/Footer'
 import PhonePlans from './components/phonePlanTable'
 import InternetPlans from './components/internetPlanTable'
 import UtilityPlans from './components/utilityPlanTable'
+import InsightsSection from './components/visualizations/InsightsSection'
 import Link from 'next/link'
 
 const LandingPage = () => {
@@ -42,25 +43,15 @@ const LandingPage = () => {
             </div>
 
             {/* Key Metrics Dashboard */}
-            <div className="mt-16 grid grid-cols-1 md:grid-cols-4 gap-6">
-              <div className="dashboard-stat text-center">
-                <div className="dashboard-stat-number">2,847</div>
-                <div className="dashboard-stat-label">Rates Shared</div>
-                <div className="dashboard-stat-change positive">+127 this week</div>
-              </div>
+            <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="dashboard-stat text-center">
                 <div className="dashboard-stat-number">$43</div>
                 <div className="dashboard-stat-label">Avg. Monthly Savings</div>
                 <div className="dashboard-stat-change positive">+$12 vs. posted rates</div>
               </div>
               <div className="dashboard-stat text-center">
-                <div className="dashboard-stat-number">156</div>
-                <div className="dashboard-stat-label">Cities Covered</div>
-                <div className="dashboard-stat-change positive">All provinces</div>
-              </div>
-              <div className="dashboard-stat text-center">
-                <div className="dashboard-stat-number">89%</div>
-                <div className="dashboard-stat-label">Users Save Money</div>
+                <div className="dashboard-stat-number">100%</div>
+                <div className="dashboard-stat-label">Users Can Save Money</div>
                 <div className="dashboard-stat-change positive">Within 3 months</div>
               </div>
             </div>
@@ -110,6 +101,9 @@ const LandingPage = () => {
           </div>
         </section>
 
+        {/* Price Insights & Market Trends */}
+        <InsightsSection />
+
         {/* CTA Section */}
         <section className="bg-primary-50 border-t border-primary-200">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
@@ -124,7 +118,7 @@ const LandingPage = () => {
                     <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clipRule="evenodd" />
                     </svg>
-                    100% Anonymous • Takes 2 minutes • Helps thousands
+                    100% Anonymous • Takes 30 seconds • Helps thousands
                   </div>
                 </div>
                 <div className="flex-shrink-0">

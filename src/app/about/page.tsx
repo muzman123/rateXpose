@@ -1,141 +1,198 @@
 import Layout from '../layout'
 import Head from 'next/head'
-import Image from 'next/image'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
-import Sections from '../components/Sections';
-import styles from '../../styles/Sections.module.css'
+import Link from 'next/link'
 
 const AboutPage = () => {
   return (
     <Layout>
       <Head>
-        <title>About RateXpose</title>
+        <title>About RateXpose - Canadian Rate Transparency Platform</title>
+        <meta name="description" content="Learn how RateXpose helps Canadians save money through anonymous rate sharing and price transparency." />
       </Head>
       <Header />
 
-    <main className="max-w-5xl mx-auto p-8 mt-10 min-h-screen">
-    <Sections>
-      <section className="flex flex-col md:flex-row items-center space-y-6 md:space-y-0 md:space-x-6">
-          <div className="flex-1">
-                <h1 className="text-4xl font-bold text-gray-900">Compare Utility, Phone, and Insurance Bills for Price Transparency</h1>
-                <p className="mt-4 text-gray-600">Find the Most Affordable Options</p>
-                <div className="mt-6 space-x-4">
-                    <button className="bg-blue-600 text-white px-4 py-2 rounded">Get Started</button>
-                    <button className="border border-blue-600 text-blue-600 px-4 py-2 rounded">Learn More</button>
-                </div>
+      <main className="min-h-screen bg-white">
+        {/* Hero Section */}
+        <section className="bg-gradient-to-b from-primary-50 to-white border-b border-secondary-200">
+          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div className="text-center">
+              <h1 className="text-4xl font-bold text-secondary-900 sm:text-5xl">
+                About RateXpose
+              </h1>
+              <p className="mt-6 text-xl text-secondary-600 max-w-3xl mx-auto">
+                Canada's first anonymous rate-sharing platform helping thousands of Canadians 
+                save money through pricing transparency
+              </p>
+              <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+                <Link href="/post-bill">
+                  <button className="btn btn-primary text-lg px-8 py-3">
+                    Share Your Rate
+                  </button>
+                </Link>
+                <Link href="/">
+                  <button className="btn btn-secondary text-lg px-8 py-3">
+                    Browse Rates
+                  </button>
+                </Link>
+              </div>
             </div>
-            <div className="flex-1">
-                <div className="bg-gray-300 w-full h-64 flex items-center justify-center">
-                    <i className="fas fa-play-circle text-5xl text-gray-500"></i>
-                </div>
           </div>
-      </section>
-    </Sections>
-    <Sections>
-      <section className="">
-            <h2 className="text-2xl font-bold text-gray-900">Price Transparency for Utility, Phone, and Insurance Bills</h2>
-            <p className="mt-4 text-gray-600">Compare your bills anonymously with others to find the most affordable options in the market.</p>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-6">
-                <div className="bg-white p-6 border rounded">
-                    <Image src="https://placehold.co/200x200" alt="Illustration of a person reviewing bills" width={200} height={200} className="w-full h-32 object-cover mb-4"/>
-                    <h3 className="text-lg font-semibold">How It Works</h3>
-                    <p className="mt-2 text-gray-600">1. Users anonymously submit their utility, phone, and insurance bills along with the service provider information.</p>
-                    <a href="#" className="text-blue-600 mt-4 inline-block">View Bills <i className="fas fa-arrow-right"></i></a>
-                </div>
-                <div className="bg-white p-6 border rounded">
-                    <Image src="https://placehold.co/200x200" alt="Illustration of bill comparison" width={200} height={200} className="w-full h-32 object-cover mb-4"/>
-                    <h3 className="text-lg font-semibold">Compare and Save</h3>
-                    <p className="mt-2 text-gray-600">2. Compare your bills with others to find the most affordable options for utility, phone, and insurance services.</p>
-                    <a href="#" className="text-blue-600 mt-4 inline-block">Compare Prices <i className="fas fa-arrow-right"></i></a>
-                </div>
-                <div className="bg-white p-6 border rounded">
-                    <Image src="https://placehold.co/200x200" alt="Illustration of affordable options" width={200} height={200} className="w-full h-32 object-cover mb-4"/>
-                    <h3 className="text-lg font-semibold">Find Affordable Options</h3>
-                    <p className="mt-2 text-gray-600">3. Discover affordable options based on the bills submitted by other users and make informed decisions.</p>
-                    <a href="#" className="text-blue-600 mt-4 inline-block">Discover Options <i className="fas fa-arrow-right"></i></a>
-                </div>
-                <div className="bg-white p-6 border rounded">
-                    <Image src="https://placehold.co/200x200" alt="Illustration of making decisions" width={200} height={200} className="w-full h-32 object-cover mb-4"/>
-                    <h3 className="text-lg font-semibold">Make Informed Decisions</h3>
-                    <p className="mt-2 text-gray-600">4. Use the information from the submitted bills to make informed decisions and choose the best service providers.</p>
-                    <a href="#" className="text-blue-600 mt-4 inline-block">Choose Providers <i className="fas fa-arrow-right"></i></a>
-                </div>
-            </div>
-      </section>
-    </Sections>
-    <Sections>
-      <section className="">
-            <h2 className="text-2xl font-bold text-gray-900">Price Transparency for Utility, Phone, and Insurance Bills</h2>
-            <p className="mt-4 text-gray-600">Compare how much you are paying to others for the most affordable options.</p>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
-                <div className="bg-white p-6 border rounded">
-                    <Image src="https://placehold.co/600x400" alt="Image showing a group of people on snowy mountains" width={600} height={400} className="w-full h-64 object-cover mb-4"/>
-                </div>
-                <div className="bg-white p-6 border rounded">
-                    <Image src="https://placehold.co/600x400" alt="Image showing a historic building with lights" width={600} height={400} className="w-full h-64 object-cover mb-4"/>
-                </div>
-            </div>
-      </section>
-      </Sections>
-      <Sections>
-      <section className="">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
-            <p className="text-gray-600 mb-8">Find answers to common questions about our utility, phone, and insurance bill comparison platform.</p>
+        </section>
 
-            <div className="mb-6">
-                <h3 className="text-xl font-semibold text-gray-900">How does the bill comparison platform work?</h3>
-                <p className="text-gray-600 mt-2">
-                    Our bill comparison platform allows you to anonymously post your utility, phone, and insurance bills, along with the company you are getting the services from. This helps create price transparency in the market so that you can compare how much you are paying to how much others are paying. You can find the most affordable options by using our platform.
+        {/* How It Works Section */}
+        <section className="py-16 bg-white">
+          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-secondary-900">How It Works</h2>
+              <p className="mt-4 text-secondary-600">
+                Compare your bills anonymously with others to find the most affordable options
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <div className="card card-hover text-center">
+                <div className="w-16 h-16 mx-auto mb-4 bg-primary-100 rounded-full flex items-center justify-center">
+                  <svg className="w-8 h-8 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                  </svg>
+                </div>
+                <h3 className="text-lg font-semibold text-secondary-900 mb-2">1. Submit Bills</h3>
+                <p className="text-secondary-600 text-sm">
+                  Anonymously submit your utility, phone, and internet bills with provider information
                 </p>
-            </div>
+              </div>
 
-            <div className="mb-6">
-                <h3 className="text-xl font-semibold text-gray-900">Is posting bills and using the platform anonymous?</h3>
-                <p className="text-gray-600 mt-2">
-                    Yes, all posting and platform usage are completely anonymous. We do not collect any personal information that can be used to identify you. Your privacy is our top priority.
+              <div className="card card-hover text-center">
+                <div className="w-16 h-16 mx-auto mb-4 bg-success-100 rounded-full flex items-center justify-center">
+                  <svg className="w-8 h-8 text-success-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                  </svg>
+                </div>
+                <h3 className="text-lg font-semibold text-secondary-900 mb-2">2. Compare Rates</h3>
+                <p className="text-secondary-600 text-sm">
+                  View real rates from other Canadians and see how your bills compare
                 </p>
-            </div>
+              </div>
 
-            <div className="mb-6">
-                <h3 className="text-xl font-semibold text-gray-900">Can I compare bills from different service providers?</h3>
-                <p className="text-gray-600 mt-2">
-                    Yes, you can compare bills from different service providers. Our platform allows you to see how much others are paying for the same services from different companies. This helps you make informed decisions and find the most affordable options.
+              <div className="card card-hover text-center">
+                <div className="w-16 h-16 mx-auto mb-4 bg-warning-100 rounded-full flex items-center justify-center">
+                  <svg className="w-8 h-8 text-warning-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                  </svg>
+                </div>
+                <h3 className="text-lg font-semibold text-secondary-900 mb-2">3. Find Better Deals</h3>
+                <p className="text-secondary-600 text-sm">
+                  Discover affordable options based on real submissions
                 </p>
-            </div>
+              </div>
 
-            <div className="mb-6">
-                <h3 className="text-xl font-semibold text-gray-900">How often are the bill postings updated?</h3>
-                <p className="text-gray-600 mt-2">
-                    The bill postings on our platform are updated in real-time. As soon as someone posts a bill, it becomes visible to others for comparison. This ensures that you always have the latest information.
+              <div className="card card-hover text-center">
+                <div className="w-16 h-16 mx-auto mb-4 bg-purple-100 rounded-full flex items-center justify-center">
+                  <svg className="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <h3 className="text-lg font-semibold text-secondary-900 mb-2">4. Save Money</h3>
+                <p className="text-secondary-600 text-sm">
+                  Negotiate better rates or switch to more affordable providers
                 </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* FAQ Section */}
+        <section className="py-16 bg-secondary-50">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-secondary-900">Frequently Asked Questions</h2>
+              <p className="mt-4 text-secondary-600">
+                Find answers to common questions about our platform
+              </p>
             </div>
 
-            <div className="mb-6">
-                <h3 className="text-xl font-semibold text-gray-900">Is there a limit to the number of bills I can post?</h3>
-                <p className="text-gray-600 mt-2">
-                    There is no limit to the number of bills you can post. Feel free to post as many bills as you want to help others and find the best deals.
+            <div className="space-y-6">
+              <div className="card">
+                <h3 className="text-xl font-semibold text-secondary-900 mb-3">
+                  How does the bill comparison platform work?
+                </h3>
+                <p className="text-secondary-600">
+                  Our platform allows you to anonymously post your utility, phone, and internet bills with provider information. 
+                  This creates price transparency so you can compare what you're paying to what others pay and find the most 
+                  affordable options.
                 </p>
-            </div>
+              </div>
 
-            <div className="mt-12 text-center">
-                <h3 className="text-xl font-semibold text-gray-900">Contact Us</h3>
-                <p className="text-gray-600 mt-2">If you have any other questions or need assistance, please contact our support team.</p>
-                <button className="bg-blue-600 text-white px-6 py-2 mt-4 rounded">Contact Support</button>
+              <div className="card">
+                <h3 className="text-xl font-semibold text-secondary-900 mb-3">
+                  Is the platform completely anonymous?
+                </h3>
+                <p className="text-secondary-600">
+                  Yes, all submissions and platform usage are completely anonymous. We do not collect any personal 
+                  information that can identify you. Your privacy is our top priority.
+                </p>
+              </div>
+
+              <div className="card">
+                <h3 className="text-xl font-semibold text-secondary-900 mb-3">
+                  Can I compare bills from different providers?
+                </h3>
+                <p className="text-secondary-600">
+                  Absolutely! Our platform shows rates from all major providers, allowing you to compare what different 
+                  companies charge for similar services. This helps you make informed decisions and find the best deals.
+                </p>
+              </div>
+
+              <div className="card">
+                <h3 className="text-xl font-semibold text-secondary-900 mb-3">
+                  How often is the data updated?
+                </h3>
+                <p className="text-secondary-600">
+                  Rate submissions are updated in real-time. As soon as someone posts a bill, it becomes visible to others 
+                  for comparison, ensuring you always have access to the latest pricing information.
+                </p>
+              </div>
+
+              <div className="card">
+                <h3 className="text-xl font-semibold text-secondary-900 mb-3">
+                  Is there a limit to submissions?
+                </h3>
+                <p className="text-secondary-600">
+                  No! You can submit as many bills as you want. The more data we have, the better insights we can provide 
+                  to help Canadians save money.
+                </p>
+              </div>
             </div>
-      </section>
-      </Sections>
-    <Sections>
-      <section className="">
-            <h2 className="text-2xl font-bold text-gray-900">Find the Best Deals on Utilities and Services</h2>
-            <p className="text-gray-600 mt-4">Compare utility, phone, and insurance bills from different providers to find the most affordable options.</p>
-            <div className="mt-6 space-x-4">
-                <button className="bg-blue-600 text-white px-4 py-2 rounded">Compare Prices</button>
-                <button className="border border-blue-600 text-blue-600 px-4 py-2 rounded">Get Started</button>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-16 bg-white border-t border-secondary-200">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 className="text-3xl font-bold text-secondary-900 mb-4">
+              Ready to Start Saving?
+            </h2>
+            <p className="text-xl text-secondary-600 mb-8">
+              Join thousands of Canadians who are finding better deals on their bills
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href="/sign-up">
+                <button className="btn btn-primary text-lg px-8 py-3">
+                  Sign Up Free
+                </button>
+              </Link>
+              <Link href="/contact-us">
+                <button className="btn btn-secondary text-lg px-8 py-3">
+                  Contact Us
+                </button>
+              </Link>
             </div>
-      </section>
-    </Sections>
+          </div>
+        </section>
       </main>
+
       <Footer />
     </Layout>
   )
