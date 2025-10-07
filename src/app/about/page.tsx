@@ -22,7 +22,7 @@ const AboutPage = () => {
                 About RateXpose
               </h1>
               <p className="mt-6 text-xl text-secondary-600 max-w-3xl mx-auto">
-                Canada's first anonymous rate-sharing platform helping thousands of Canadians 
+                Canada&apos;s first anonymous rate-sharing platform helping thousands of Canadians
                 save money through pricing transparency
               </p>
               <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
@@ -119,8 +119,8 @@ const AboutPage = () => {
                   How does the bill comparison platform work?
                 </h3>
                 <p className="text-secondary-600">
-                  Our platform allows you to anonymously post your utility, phone, and internet bills with provider information. 
-                  This creates price transparency so you can compare what you're paying to what others pay and find the most 
+                  Our platform allows you to anonymously post your utility, phone, and internet bills with provider information.
+                  This creates price transparency so you can compare what you&apos;re paying to what others pay and find the most
                   affordable options.
                 </p>
               </div>
